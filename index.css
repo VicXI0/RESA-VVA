@@ -1,0 +1,373 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Montserrat', -apple-system, sans-serif;
+    background: linear-gradient(135deg,  #2c80b4 0%,  #27ae60 100%);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: #58d68d;
+    box-shadow: 0 2px 10px rgba(52, 152, 219, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+/* Navigation */
+.user-menu {
+    position: relative;
+}
+
+.user-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.user-button:hover {
+    background: #1e5234;
+}
+
+.user-avatar {
+    width: 35px;
+    height: 35px;
+    background: #ffffff;
+    color: #3498db;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    min-width: 200px;
+    z-index: 1000;
+    margin-top: 5px;
+}
+
+.user-menu.active .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 0px 0px 20px 20px;
+    border-bottom: 2px solid  #ecf0f1;
+    transition: background 0.3s;
+}
+
+.dropdown-item:hover {
+    background: #ffffff;
+}
+
+.dropdown-item.danger {
+    color: #c0392b;
+    border-bottom: none;
+}
+
+.dropdown-item.danger:hover {
+    background: #c0392b;
+    color: white;
+}
+
+.btn-login {
+    background: #667eea;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 70px;
+    font-weight: 600;
+    transition: background 0.5s;
+}
+
+.btn-login:hover {
+    background: #5a6fd8;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg,  #2c80b4 0%,  #27ae60 100%);
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-cta {
+    display: inline-block;
+    background: #667eea;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.hero-cta:hover {
+    background: #5a6fd8;
+    color: white;
+    text-decoration: none;
+}
+
+.stats {
+    background: white;
+    padding: 3rem 2rem;
+}
+
+.stats-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    color: #2c80b4;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    color: #666;
+    font-weight: 500;
+}
+
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    color:  #ecf0f1;
+    font-size: 1.1rem;
+}
+
+/* Listings grid */
+.listings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.listing-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.listing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    text-decoration: none;
+    color: inherit;
+}
+
+.listing-card.reserved {
+    border-left: 4px solid #f7dc6f;
+}
+
+.listing-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.listing-content {
+    padding: 1.5rem;
+}
+
+.listing-type {
+    color: #667eea;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.listing-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.listing-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.listing-features span {
+    background: #f8f9fa;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.listing-price {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    margin-bottom: 1rem;
+}
+
+.price-amount {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.price-period {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Badges */
+.badge-disponible, .badge-reserve {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.badge-disponible {
+    background: #d4edda;
+    color: #155724;
+}
+
+.badge-reserve {
+    background: #fff3cd;
+    color: #856404;
+}
+
+/* Empty state */
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #666;
+}
+
+.empty-state h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-content {
+        padding: 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .stats-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .listings-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 2rem 1rem;
+    }
+    
+    .stats-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-cta {
+        padding: 12px 24px;
+        font-size: 1em;
+    }
+}
