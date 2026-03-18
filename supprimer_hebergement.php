@@ -189,11 +189,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['confirmer_suppression
                                     </span>
                                 </td>
                                 <td class="actions-cell">
-                                    <div class="actions-wrapper">
-                                        <a href="modifier_hebergements.php?id=<?php echo $heb['NOHEB']; ?>" 
-                                           class="btn-modifier" title="Modifier">
-                                            <i class="fas fa-edit"></i>
-                                        </a>
+                                    <div class="actions-wrapper"></div>
                                         <button class="btn-supprimer" 
                                                 data-id="<?php echo $heb['NOHEB']; ?>"
                                                 data-nom="<?php echo htmlspecialchars($heb['NOMHEB']); ?>"
